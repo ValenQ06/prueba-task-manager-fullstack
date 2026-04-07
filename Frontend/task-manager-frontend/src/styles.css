@@ -1,0 +1,102 @@
+/* PALETA */
+:root {
+  --magenta: #d63384;
+  --violet: #7b4fc9;
+  --title-violet: #5a2ea6;
+  --cream: #f8f5f2;
+  --light-gray: #f1f1f1;
+  --white: #ffffff;
+}
+
+/* Fondo general */
+body {
+  background-color: var(--cream);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Títulos */
+h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--title-violet);
+  letter-spacing: 0.5px;
+}
+
+/* Tarjetas */
+.card-custom {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+/* Botones */
+.btn-magenta {
+  background-color: var(--magenta);
+  color: white;
+  border: none;
+}
+
+.btn-magenta:hover {
+  background-color: #b02a6f;
+}
+
+.btn-violet {
+  background-color: var(--violet);
+  color: white;
+}
+
+.btn-violet:hover {
+  background-color: #59359c;
+}
+
+/* Botón deshabilitado visible */
+.btn-magenta:disabled {
+  background-color: #d63384;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Fondo oscuro */
+.modal-backdrop-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+}
+
+/* Caja modal */
+.modal-custom {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.modal-custom p {
+  margin-bottom: 8px;
+}
+
+/*CUADRO INTERNO MAGENTA */
+.modal-inner {
+  background: #f8e6f0; /* crema-magenta suave */
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* título modal ver*/
+.modal-inner h4 {
+  color: #7b4fc9;
+  font-weight: 600;
+}

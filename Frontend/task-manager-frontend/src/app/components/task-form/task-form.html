@@ -1,0 +1,42 @@
+<div class="card-custom">
+  <h5 class="mb-3 fw-bold">Create Task</h5>
+
+  <form [formGroup]="form" (ngSubmit)="submit()" class="row g-2">
+    <div class="col-md-3">
+      <input class="form-control" formControlName="title" placeholder="Title" />
+
+      <small class="text-danger" *ngIf="form.get('title')?.touched && form.get('title')?.invalid">
+        Title is required
+      </small>
+    </div>
+
+    <div class="col-md-3">
+      <input class="form-control" formControlName="description" placeholder="Description" />
+    </div>
+
+    <div class="col-md-2">
+      <select class="form-select" formControlName="userId">
+        <option value="">User</option>
+        <option *ngFor="let u of users" [value]="u.id">
+          {{ u.name }}
+        </option>
+      </select>
+
+      <small class="text-danger" *ngIf="form.get('userId')?.touched && form.get('userId')?.invalid">
+        User is required
+      </small>
+    </div>
+
+    <div class="col-md-2">
+      <input class="form-control" formControlName="extraData" placeholder='{"priority":"High"}' />
+    </div>
+
+    <div class="col-md-2">
+      <button class="btn btn-magenta w-100" type="submit" [disabled]="form.invalid">Create</button>
+    </div>
+
+    <div *ngIf="successMessage" class="alert alert-info mt-2">
+      {{ successMessage }}
+    </div>
+  </form>
+</div>

@@ -1,0 +1,21 @@
+﻿namespace TaskManagerAPI.Entities
+{
+    public class TaskItem
+    {
+        public int Id { get; set; }
+
+        public string Title { get; set; } = null!;
+
+        public string? Description { get; set; }
+
+        public string Status { get; set; } = "Pending";
+
+        public int UserId { get; set; }
+
+        public DateTime CreatedAt { get; set; }
+
+        public string? ExtraData { get; set; }
+
+        public User User { get; set; } = null!;
+    }
+}
